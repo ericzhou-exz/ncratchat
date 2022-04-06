@@ -29,6 +29,7 @@ export default function Login() {
 
         socket.on("connect_error", (err) => {
             console.log(err);
+            alert(err)
         });
 
         socket.on("auth-packet", ({ token, username, type }) => {

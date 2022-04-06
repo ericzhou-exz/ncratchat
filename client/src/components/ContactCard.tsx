@@ -1,12 +1,8 @@
-import React, { useContext } from "react";
 import { UserType } from "../models/Types";
 import { Box, Typography } from "@mui/material";
 import userTypes from "./UserTypes";
-import ChatContext from "./ChatContext";
 
 export default function ContactCard(props: { user: UserType }) {
-    const { activeChat } = useContext(ChatContext);
-
     var messagePreview: string = props.user.lastMessage
         ? props.user.lastMessage?.from + ": " + props.user.lastMessage.content
         : "No recent messages";
